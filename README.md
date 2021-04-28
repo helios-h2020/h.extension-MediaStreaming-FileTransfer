@@ -21,8 +21,7 @@ It offers simple, cheap and reusable stacks for clients and servers. It supports
 
 ### Basic Tus Architecture
 
-![](https://raw.githubusercontent.com/helios-h2020/h.extension-MediaStreaming-FileTransfer/master/files/TUS.png" alt="Basic Tus Architecture")
-
+<img src="https://raw.githubusercontent.com/helios-h2020/h.extension-MediaStreaming-FileTransfer/master/files/TUS.png" alt="Basic Tus Architecture">
 
 ### File Transfer:
 
