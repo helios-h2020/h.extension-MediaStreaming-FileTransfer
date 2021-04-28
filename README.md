@@ -34,6 +34,10 @@ All these values can be modified in the `values/strings.xml` file.
 
 ### How to use File Transfer:
 
+This module generates a .aar file to be included in your applications as a dependency. See more details at Multiproject dependencies chapter.
+
+To call the extension from your application, include the Intent in your activity
+
 ```java
     Intent fileTransferIntent = new Intent(MainActivity.this, FileTransferActivity.class);
     MainActivity.this.startActivity(fileTransferIntent);
@@ -63,6 +67,21 @@ When the activity finish, return the uploaded file URL to the mainly activity th
     }
 ```
 
+### How to Develop
+
+- Install Git in your computer: https://github.com/git-guides/install-git
+
+- Choose a directory from your computer and download with Git the code using the link provided in this page:
+
+<img src="https://raw.githubusercontent.com/helios-h2020/h.extension-MediaStreaming-FileTransfer/master/files/github.PNG" alt="FileTransfer github">
+
+`git clone https://github.com/helios-h2020/h.extension-MediaStreaming-FileTransfer.git`
+
+- Open Android Studio and open an existing project from the directory of your code downloaded. To install Android Studio follow the next link: https://developer.android.com/studio/install)
+
+- To generate an aar file from the code, select the Build option in the Menu Bar, select ReBuild project or choose Make Project icon as you can see in the picture. Once generated, you can find the file in app/build/options/aar (you can rename the file as you like):
+
+<img src="https://raw.githubusercontent.com/helios-h2020/h.extension-MediaStreaming-FileTransfer/master/files/build.PNG" alt="FileTransfer build">
 
 ### Request permissions
 
@@ -145,3 +164,42 @@ For example, to declare the dependency on the filetransfer module and the respec
 `implementation 'eu.h2020.helios_social.modules.filetransfer:filetransfer:1.0.10'`
 
 For more info review: `https://scm.atosresearch.eu/ari/helios_group/generic-issues/blob/master/multiprojectDependencies.md`
+
+### How to use the dependencies locally ###
+
+If you want to include the .aar file generated as a dependency in the application whitout use Nexus dependencies:
+
+- Go to your application code and create libs folder inside app folder:
+
+<img src="https://raw.githubusercontent.com/helios-h2020/h.app-MediaStreaming/master/doc/libs.PNG" alt="libs folder">
+
+- Open build.gradle at Project level and add flatDir{dirs 'libs'} :
+
+<img src="https://raw.githubusercontent.com/helios-h2020/h.app-MediaStreaming/master/doc/libs_gradle.PNG" alt="Project build.gradle">
+
+```
+allprojects {
+   repositories {
+      jcenter()
+      flatDir {
+        dirs 'libs'
+      }
+   }
+}
+```
+
+- Open build.gradle at app level and add .aar file:
+
+<img src="https://raw.githubusercontent.com/helios-h2020/h.app-MediaStreaming/master/doc/gradle_app.PNG" alt="app build.gradle">
+
+```
+dependencies {
+     compile(name:'file_name', ext:'aar')
+}
+```
+
+###FileTransfer mudule Storage
+
+The module implements a local storage system to consume the TUS server.
+
+See more info at: https://github.com/helios-h2020/h.core-PersonalStorageElements
