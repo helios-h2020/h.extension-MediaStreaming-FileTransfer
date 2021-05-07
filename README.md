@@ -198,7 +198,7 @@ dependencies {
 }
 ```
 
-### FileTransfer mudule Storage
+### FileTransfer module Storage
 
 The module implements a local storage system to consume the TUS server.
 
