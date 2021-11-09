@@ -57,8 +57,11 @@ public class FileTransferActivity extends AppCompatActivity {
 
         try {
             SharedPreferences pref = getSharedPreferences("tus", 0);
+            pref.edit().clear().commit();
             client = new TusClient();
-            String url = getString(R.string.TUS_URL);
+            //String url = getString(R.string.TUS_URL);
+            String url = getIntent().getStringExtra("upload_url");
+            if (url == null) url = getString(R.string.TUS_URL);
             client.setUploadCreationURL(new URL(url));
             client.enableResuming(new TusPreferencesURLStore(pref));
         } catch(Exception e) {
