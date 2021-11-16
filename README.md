@@ -25,9 +25,14 @@ It offers simple, cheap and reusable stacks for clients and servers. It supports
 
 ### File Transfer:
 
-Thanks to the TUS server, a user can upload content from the mobile phone to the personal storage. The upload can be paused and resumed if needed. The default configuration is:
+Thanks to the TUS server, a user can upload content from the mobile phone to the personal storage. The upload can be paused and resumed if needed. 
 
-* TURN server url: `https://builder.helios-social.eu/files/`
+This module accept the next parameters:
+
+- TUS Server
+
+The default configuration is:
+* TUS server url: `https://builder.helios-social.eu/files/`
 
 All these values can be modified in the `values/strings.xml` file.
 
