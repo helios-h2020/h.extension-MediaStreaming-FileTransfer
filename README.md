@@ -29,7 +29,7 @@ Thanks to the TUS server, a user can upload content from the mobile phone to the
 
 This module accept the next parameters:
 
-- TUS Server
+- TUS Server url
 
 The default configuration is:
 * TUS server url: `https://builder.helios-social.eu/files/`
