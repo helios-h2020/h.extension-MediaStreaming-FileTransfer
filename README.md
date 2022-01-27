@@ -113,7 +113,7 @@ Also to improve the automation for deploy, versioning and distribution of the pr
 ### How to use the HELIOS Nexus
 
 Similar to other dependencies available in Maven Central, Google or others repositories. In this case we specify the Nexus
-repository provided by Atos: `https://builder.helios-social.eu/repository/helios-repository/`
+repository provided by Atos: `https://registry.helios.ari-imet.eu/repository/helios-repository/`
 
 This URL makes the project dependencies available.
 
@@ -125,7 +125,7 @@ The `build.gradle` of the project define the Nexus repository and the credential
 repositories {
         ...
         maven {
-            url "https://builder.helios-social.eu/repository/helios-repository/"
+            url "https://registry.helios.ari-imet.eu/repository/helios-repository/"
             credentials {
                 username = heliosUser
                 password = heliosPassword
