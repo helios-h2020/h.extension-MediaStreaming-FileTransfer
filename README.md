@@ -32,7 +32,7 @@ This module accept the next parameters:
 - TUS Server url
 
 The default configuration is:
-* TUS server url: `https://builder.helios-social.eu/files/`
+* TUS server url: `http://helios.ari-imet.eu:1080/files/`
 
 All these values can be modified in the `values/strings.xml` file.
 
