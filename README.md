@@ -141,7 +141,7 @@ heliosUser=username
 heliosPassword=password
 ```
 
-To request Nexus username and password, contact with: `jordi.hernandezv@atos.net`
+To request Nexus username and password, contact with: `francesco.dandria@atos.net@atos.net`
 
 
 ### How to deploy a new version of the dependencies
@@ -158,7 +158,7 @@ Due to the need of managing the dependencies, Atos has selected additional tools
 After pushing a change to the `master` branch, the maintainer can build the module by means of the job in the Jenkins interface. GitLab repositories are set to protect
 the `master` branch push and merge for the partner in charge of its module/project (maintainer).
 
-To request Jenkins username and password, contact with: `jordi.hernandezv@atos.net`
+To request Jenkins username and password, contact with: `francesco.dandria@atos.net@atos.net`
 
 
 ### How to use the dependencies
